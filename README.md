@@ -1,4 +1,4 @@
-#Para crear un snapshot en KVM, sigue estos pasos:
+# Para crear un snapshot en KVM, sigue estos pasos:
 
 1. Abre el hipervisor KVM y accede a la máquina virtual (VM) que deseas tomar el snapshot.
 
