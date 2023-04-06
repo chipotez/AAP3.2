@@ -22,7 +22,11 @@ Donde NOMBRE_DE_HOST es el nombre que deseas asignar al sistema. Este comando es
 
 4. Para establecer el hostname del sistema y modificar el archivo /etc/machine-info con información adicional:
 
-`sudo hostnamectl set-hostname --pretty "NOMBRE PRESENTABLE" --icon-name ICONO --chassis TIPO_CHASIS`
+```
+hostnamectl set-hostname --pretty "NOMBRE PRESENTABLE"
+hostnamectl set-icon-name server
+hostnamectl set-chassis server
+```
 
 Donde NOMBRE PRESENTABLE es un nombre que describes el sistema, ICONO es el nombre del icono asociado con el sistema y TIPO_CHASIS es el tipo de chasis del sistema (por ejemplo, laptop o desktop). Este comando establece el hostname de forma temporal y modifica el archivo /etc/hostname y /etc/machine-info con la información adicional.
 
