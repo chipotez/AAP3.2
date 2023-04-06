@@ -1,55 +1,12 @@
+# RED HAT ANSIBLE AUTOMATION PLATFORM 2.3
 
-# Para crear un snapshot en KVM, sigue estos pasos:
+Red Hat Ansible Automation Platform simplifica el desarrollo y la operación de cargas de trabajo de automatización para administrar los ciclos de vida de la infraestructura de aplicaciones empresariales. Funciona en múltiples dominios de TI, incluidas operaciones, redes, seguridad y desarrollo, así como en diversos entornos híbridos. Descargue el paquete "setup" a continuación para instalar los componentes autohospedados de Ansible Automation Platform en Red Hat Enterprise Linux. Si está instalando en un entorno sin conexión, descargue en su lugar el paquete "setup bundle".
 
-1. Abre el hipervisor KVM y accede a la máquina virtual (VM) que deseas tomar el snapshot.
+1.1. Requisitos 
+* Ha elegido y obtenido un instalador de plataforma del Software [ Red Hat Ansible Automation Platform Product Software.](https://access.redhat.com/downloads/content/480/ver=2.3/rhel---9/2.3/x86_64/product-software)
+* Está instalando en una máquina que cumple con los requisitos del sistema base.
+* Ha creado una cuenta de servicio de registro de Red Hat, siguiendo las instrucciones de la guía [Creating Registry Service Accounts guide.](https://access.redhat.com/RegistryAuthentication#creating-registry-service-accounts-6)
 
-2. Detén la VM utilizando el siguiente comando de KVM:
+RECURSOS ADICIONALES
 
-`virsh shutdown nombre_de_la_vm`
-
-3. Una vez que la VM esté detenida, toma el snapshot utilizando el siguiente comando de KVM:
-
-`virsh snapshot-create-as nombre_de_la_vm nombre_del_snapshot`
-
-Donde:
-- nombre_de_la_vm es el nombre de la VM que deseas tomar el snapshot.
-- nombre_del_snapshot es el nombre que deseas asignar al snapshot.
-4. Inicia la VM nuevamente utilizando el siguiente comando de KVM:
-
-
-`virsh start nombre_de_la_vm`
-
-O, si deseas utilizar la interfaz gráfica de usuario, puedes hacer clic derecho en la VM en la lista de VMs y seleccionar "Arrancar".
-
-Con estos pasos, deberías poder crear un snapshot de una VM de KVM de manera sencilla. Es importante tener en cuenta que los comandos pueden variar ligeramente según la distribución de Linux que estés utilizando y la versión de KVM que tengas instalada.
-
-Recuerda que los snapshots se utilizan para capturar el estado actual de una VM y permiten volver a ese estado en cualquier momento en el futuro. Es importante tener en cuenta que los snapshots pueden ocupar una cantidad significativa de espacio en disco y pueden afectar el rendimiento de la VM, por lo que es recomendable utilizarlos con moderación y borrarlos cuando ya no sean necesarios.
-
-
-# Clonar una VM en KVM
-
-Para clonar una VM en KVM utilizando el comando virsh, sigue estos pasos:
-
-1. Abre el hipervisor KVM y accede a la VM que deseas clonar.
-
-2. Detén la VM utilizando el siguiente comando de KVM:
-
-
-`virsh shutdown nombre_de_la_vm`
-
-3. Una vez que la VM esté detenida, clónala utilizando el siguiente comando de KVM:
-
-`virt-clone --original nombre_de_la_vm --name nombre_de_la_nueva_vm --auto-clone`
-
-Donde:
-
-- nombre_de_la_vm es el nombre de la VM que deseas clonar.
-- nombre_de_la_nueva_vm es el nombre que deseas asignar a la nueva VM.
-
-4. Inicia la nueva VM utilizando el siguiente comando de KVM:
-
-`virsh start nombre_de_la_nueva_vm`
-
-O, si deseas utilizar la interfaz gráfica de usuario, puedes hacer clic derecho en la nueva VM en la lista de VMs y seleccionar "Arrancar".
-
-Con estos pasos, deberías poder clonar una VM de KVM de manera sencilla utilizando el comando virsh. Es importante tener en cuenta que los comandos pueden variar ligeramente según la distribución de Linux que estés utilizando y la versión de KVM que tengas instalada. Además, ten en cuenta que la nueva VM será una copia exacta de la original, por lo que necesitarás cambiar su configuración y/o nombre si deseas utilizarla con una finalidad distinta a la original.
+Para obtener más información sobre cómo obtener un instalador de plataforma o los requisitos del sistema, consulte los requisitos del sistema de [Red Hat Ansible Automation Platform system requirements](https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.3/html/red_hat_ansible_automation_platform_planning_guide/platform-system-requirements) dentro de Red Hat Ansible Automation Platform Planning Guide
