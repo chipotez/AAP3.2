@@ -182,5 +182,15 @@ Ends:                02/09/2024
 Entitlement Type:    Physical
 </pre>
 
+Troubleshooting
+
+If you are unable to locate certain packages that came bundled with the Ansible Automation Platform installer, or if you are seeing a Repositories disabled by configuration message, try enabling the repository using the command:
+
+Red Hat Ansible Automation Platform 2.3 for RHEL 8
+subscription-manager repos --enable ansible-automation-platform-2.3-for-rhel-8-x86_64-rpms
+
+Red Hat Ansible Automation Platform 2.3 for RHEL 9
+subscription-manager repos --enable ansible-automation-platform-2.3-for-rhel-9-x86_64-rpms
+
 
 
