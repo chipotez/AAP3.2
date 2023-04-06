@@ -96,6 +96,7 @@ Procesa eventos y ejecuta trabajos de clúster, incluyendo actualizaciones de pr
 **Nodos híbridos**
 
 Ejecuta tanto automatización como trabajos de clúster. Los comentarios sobre la CPU y la memoria
+
 | Requisito | Requerido |
 | --- | --- |
 | RAM | 16 GB |
