@@ -212,3 +212,28 @@ Extract the files:
 
 `tar xvzf ansible-automation-platform-setup-<latest-version>.tar.gz`
 
+RPM install
+
+Install Ansible Automation Platform Installer Package
+
+v.2.3 for RHEL 8 for x86_64
+
+$ sudo dnf install --enablerepo=ansible-automation-platform-2.3-for-rhel-8-x86_64-rpms ansible-automation-platform-installer
+v.2.3 for RHEL 9 for x86-64
+
+$ sudo dnf install --enablerepo=ansible-automation-platform-2.3-for-rhel-9-x86_64-rpms ansible-automation-platform-installer
+Note
+dnf install enables the repo as the repo is disabled by default.
+
+When you use the RPM installer, the files are placed under the /opt/ansible-automation-platform/installer directory.
+
+6.2. Installing without internet access
+Use the Red Hat Ansible Automation Platform (AAP) Bundle installer if you are unable to access the internet, or would prefer not to install separate components and dependencies from online repositories. Access to Red Hat Enterprise Linux repositories is still needed. All other dependencies are included in the tar archive.
+
+Procedure
+
+Navigate to https://access.redhat.com/downloads/content/480
+Click Download Now for the Ansible Automation Platform <latest-version> Setup Bundle.
+Extract the files:
+
+$ tar xvzf ansible-automation-platform-setup-bundle-<latest-version>.tar.gz
