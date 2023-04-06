@@ -23,7 +23,7 @@ Donde NOMBRE_DE_HOST es el nombre que deseas asignar al sistema. Este comando es
 4. Para establecer el hostname del sistema y modificar el archivo /etc/machine-info con información adicional:
 
 ```
-hostnamectl set-hostname --pretty "NOMBRE PRESENTABLE"
+hostnamectl set-hostname --pretty "Servidor Ansible"
 hostnamectl set-icon-name server
 hostnamectl set-chassis server
 ```
