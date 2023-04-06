@@ -101,3 +101,27 @@ Ejecuta tanto automatización como trabajos de clúster. Los comentarios sobre l
 | --- | --- |
 | RAM | 16 GB |
 | CPUs | 4 |
+
+
+Chapter 5. Attaching your Red Hat Ansible Automation Platform subscription
+You must have valid subscriptions attached on all nodes before installing Red Hat Ansible Automation Platform. Attaching your Ansible Automation Platform subscription allows you to access subcription-only resources necessary to proceed with the installation.
+
+Note
+Attaching a subscription is unnecessary if you have enabled Simple Content Access Mode on your Red Hat account. Once enabled, you will need to register your systems to either Red Hat Subscription Management (RHSM) or Satellite before installing the Ansible Automation Platform. See Simple Content Access Mode for more information.
+
+Procedure
+
+Obtain the pool_id for your Red Hat Ansible Automation Platform subscription:
+
+<pre>[root@app ~]# subscription-manager list --available --all | grep &quot;Ansible Automation Platform&quot; -B 3 -A 6
+Ends:                10/11/2023
+Entitlement Type:    Physical
+
+Subscription Name:   Red Hat <span style="color:#C01C28"><b>Ansible Automation Platform</b></span>, Self-Support (100 Managed Nodes, NFR, Partner Only)
+Provides:            Red Hat <span style="color:#C01C28"><b>Ansible Automation Platform</b></span>
+                     Red Hat Single Sign-On
+                     JBoss Enterprise Application Platform
+SKU:                 SER0496
+Contract:            16686769
+Pool ID:             2c94a0538636e30001863bc3c1663c04
+Provides Management: No</pre>
