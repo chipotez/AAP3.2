@@ -44,4 +44,59 @@ Tabla Sistema Base
 | Browser | A currently supported version of Mozilla FireFox or Google Chrome|
 | Database | PostgreSQL version 13|
 
- 
+Esto es necesario para que puedas trabajar con actualizaciones y colecciones de proyectos:
+
+- Asegúrate de que los siguientes nombres de dominio formen parte de la lista de permitidos del firewall o del proxy para una conexión y descarga exitosa de colecciones desde el Automation Hub o el servidor Galaxy:
+
+    - galaxy.ansible.com
+    - cloud.redhat.com
+    - console.redhat.com
+    - sso.redhat.com
+
+- La inspección SSL debe estar deshabilitada, ya sea cuando se usan certificados autofirmados o para los dominios de Red Hat.
+
+:warning: Nota: Los requisitos para los sistemas administrados por Ansible Automation Platform son los mismos que para Ansible. Consulta el apartado "Introducción" de [Getting Started](https://docs.ansible.com/ansible/latest/user_guide/intro_getting_started.html).
+
+Notas adicionales para los requisitos de Red Hat Ansible Automation Platform:
+
+- Los requisitos para los sistemas administrados por Ansible Automation Platform son los mismos que para Ansible. Consulta el apartado "Introducción" de la Guía del usuario de Ansible.
+- Aunque Red Hat Ansible Automation Platform depende de los Playbooks de Ansible y requiere la instalación de la última versión estable de Ansible antes de instalar el controlador de automatización, las instalaciones manuales de Ansible ya no son necesarias.
+- Para las nuevas instalaciones, el controlador de automatización instala el paquete de la versión más reciente de Ansible 2.3.
+- Si se realiza una instalación empaquetada de Ansible Automation Platform, el programa de instalación intenta instalar Ansible (y sus dependencias) desde el paquete por ti.
+- Si decides instalar Ansible por tu cuenta, el programa de instalación de Ansible Automation Platform detecta que Ansible ha sido instalado y no intenta reinstalarlo.
+
+:warning: Nota: Debes instalar Ansible utilizando un administrador de paquetes como yum, y la versión estable más reciente del administrador de paquetes debe estar instalada para que Red Hat Ansible Automation Platform funcione correctamente. La versión 2.9 de Ansible es requerida para las versiones 3.8 y posteriores.
+
+## Requisitos del sistema del controlador de automatización
+
+El controlador de automatización es un sistema distribuido, donde diferentes componentes de software pueden estar colocados o desplegados en varios nodos de cómputo. En el instalador, se proporcionan los tipos de nodo de control, híbrido, ejecución y salto como abstracciones para ayudarte a diseñar la topología adecuada para tu caso de uso.
+
+Utiliza las siguientes recomendaciones para el tamaño de los nodos:
+
+:warning: Nota: En todos los nodos excepto los nodos de salto, asigna un mínimo de 20 GB a /var/lib/awx para el almacenamiento del entorno de ejecución.
+
+**Nodos de ejecución**
+
+Ejecuta la automatización. Aumenta la memoria y la CPU para aumentar la capacidad de ejecución de más procesos.
+
+| Requisito | Requerido |
+| --- | --- |
+| RAM | 16 GB |
+| CPUs | 4 |
+
+**Nodos de control**
+
+Procesa eventos y ejecuta trabajos de clúster, incluyendo actualizaciones de proyectos y trabajos de limpieza. Aumentar la CPU y la memoria puede ayudar con el procesamiento de eventos de trabajo.
+
+| Requisito | Requerido |
+| --- | --- |
+| RAM | 16 GB |
+| CPUs | 4 |
+
+**Nodos híbridos**
+
+Ejecuta tanto automatización como trabajos de clúster. Los comentarios sobre la CPU y la memoria
+| Requisito | Requerido |
+| --- | --- |
+| RAM | 16 GB |
+| CPUs | 4 |
