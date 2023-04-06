@@ -32,3 +32,14 @@ themike.aap.test
 
 eyJhbGciOiJSUzUxMiJ9.eyJzdWIiOiIzNmQ0OGNhOGRlYmI0NGVlOTdjZjViOWIxN2U0Mjg1NCJ9.tQgr3i6Tg_j8osBhdHJzaiDctDVFHTVPWG5-_jl1AyCaTh1_Ea_VmlBPNYZjgAf763QsEIJpMSHFwbHM9VJedLbKIn1mrzX7bXapymS79Yl3SbNXO4h0PbRxDlvJjg5Cf9zK_7UYDjSLtFkEvrAXTZjAm3dt7QfeQRbM8CkNyOJ4twM_5xfDlpphVdDG-6o1cDAlXwv5b3XWpdlbwLIFAemtB3TVmy6faAWVVgRhct6BKmrHQ6ZJgyM4yOz81LtT91jlfVNzf1Ync1wr5PF9CtGv53cr5ZeiWRK-3WIIk6p9gOjZav-0UMcdlxSgLX1iGUyU5U2ozCUaVpm3P0CcBmk4qE0dw4lDQgKSrLnLiFp9YYYs5UO8PxjAMgvMJg6TY-GsUsYWwer-9SWrhq-KV28JkCkyEeGPxyv5f9d4lni-6En3qnVdI0VTku-MPmyjbQlb2DP0ZECzdp0mYIW1NAJyhIEGnuuLWknDi6j_PeO3RxAxBcFgJ3nKn8LJ2GPod0JOIb1Hd67Ki93GcALrQOkV9eMdOBMxgsW8vegPtrP5WZfVAF4UqIhGM2MRuayuifLFtwpFMTtQ5mqeo5S51k2_UuXr_fG40-Upe6-1tbFJEImiJi6rALY0f9npTPFrt97MlVZx6zOkc8Blr9gc_8sYtVp8IHTs6eDfT8_M5is
 -->
+
+ 	| | Required |	Notes |
+  | --- | --- | --- |
+  | Subscription | Valid Red Hat Ansible Automation Platform|  |
+| OS | Red Hat Enterprise Linux 8.4 or later 64-bit (x86)|Red Hat Ansible Automation Platform is also supported on OpenShift, see Deploying the Red Hat Ansible Automation Platform operator on OpenShift Container Platform for more information.|
+| Ansible | version 2.3 required |If Ansible is not already present on the system, the setup playbook will install ansible-core 2.14.|
+| Python | 3.8 or later||
+| Browser | A currently supported version of Mozilla FireFox or Google Chrome|
+| Database | PostgreSQL version 13|
+
+ 
