@@ -192,5 +192,23 @@ subscription-manager repos --enable ansible-automation-platform-2.3-for-rhel-8-x
 Red Hat Ansible Automation Platform 2.3 for RHEL 9
 subscription-manager repos --enable ansible-automation-platform-2.3-for-rhel-9-x86_64-rpms
 
+Chapter 6. Choosing and obtaining a Red Hat Ansible Automation Platform installer
+Choose the Red Hat Ansible Automation Platform installer you need based on your Red Hat Enterprise Linux environment internet connectivity. Review the scenarios below and determine which Red Hat Ansible Automation Platform installer meets your needs.
 
+6.1. Installing with internet access
+Choose the Red Hat Ansible Automation Platform (AAP) installer if your Red Hat Enterprise Linux environment is connected to the internet. Installing with internet access retrieves the latest required repositories, packages, and dependencies. Choose one of the following ways to set up your AAP installer.
+
+Tarball install
+
+Navigate to https://access.redhat.com/downloads/content/480
+Click Download Now for the Ansible Automation Platform <latest-version> Setup.
+
+Extract the files:
+`$ tar xvzf ansible-automation-platform-setup-<latest-version>.tar.gz`
+
+Click Download Now for the Ansible Automation Platform <latest-version> Setup.
+
+Extract the files:
+
+`tar xvzf ansible-automation-platform-setup-<latest-version>.tar.gz`
 
