@@ -22,6 +22,42 @@ Donde NOMBRE_DE_HOST es el nombre que deseas asignar al sistema. Este comando es
 
 4. Para establecer el hostname del sistema y modificar el archivo /etc/machine-info con información adicional:
 
+Para las opciones --icon-name y --chassis del comando hostnamectl, se pueden usar diferentes valores dependiendo de la distribución y la versión del sistema operativo. En general, estos valores están definidos por la especificación de freedesktop.org.
+
+Para la opción --icon-name, algunos de los valores comunes que se pueden usar incluyen:
+```
+computer
+laptop
+tablet
+smartphone
+server
+network-server
+desktop
+audio-card
+video-display
+```
+Para la opción --chassis, algunos de los valores comunes que se pueden usar incluyen:
+```
+desktop
+laptop
+server
+handset
+tablet
+convertible
+all-in-one
+mini-tower
+tower
+portable
+netbook
+sub-notebook
+main-server-chassis
+expansion-chassis
+bus-expansion-chassis
+peripheral-chassis
+```
+Ten en cuenta que la lista completa de valores para estas opciones puede variar según la distribución y la versión del sistema operativo. Además, algunas distribuciones también pueden proporcionar valores personalizados para estas opciones. En cualquier caso, puedes usar el comando hostnamectl --help para obtener una lista completa de las opciones y los valores disponibles en tu sistema operativo.
+
+Configurando el nombre:
 ```
 hostnamectl set-hostname --pretty "Servidor Ansible"
 hostnamectl set-icon-name server
