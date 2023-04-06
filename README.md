@@ -10,3 +10,17 @@ Red Hat Ansible Automation Platform simplifica el desarrollo y la operación de 
 RECURSOS ADICIONALES
 
 Para obtener más información sobre cómo obtener un instalador de plataforma o los requisitos del sistema, consulte los requisitos del sistema de [Red Hat Ansible Automation Platform system requirements](https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.3/html/red_hat_ansible_automation_platform_planning_guide/platform-system-requirements) dentro de Red Hat Ansible Automation Platform Planning Guide
+
+## Creación de cuentas de servicio de registro
+Diríjase a la Aplicación de Gestión de Cuentas de Servicio de Registro e inicie sesión si es necesario.
+
+1. En la página de Cuentas de Servicio de Registro, haga clic en el botón Nueva Cuenta de Servicio.
+2. Proporcione un nombre para la cuenta de servicio. Se le antepone una cadena fija y aleatoria.
+    - Ingrese una descripción.
+    - Haga clic en crear.
+    
+3. Vuelva a sus Cuentas de Servicio.
+4. Haga clic en la cuenta de servicio que creó.
+    - Tome nota del nombre de usuario, que incluye la cadena antepuesta (es decir, XXXXXXX|nombredeusuario). Este es el nombre de usuario que debe usarse para iniciar sesión en registry.redhat.io.
+    - Tome nota de la contraseña. Esta es la contraseña que debe usarse para iniciar sesión en registry.redhat.io.
+Hay pestañas disponibles dentro de la página de Información de Token que ofrecen orientación sobre cómo utilizar el token de autenticación para diversos escenarios. Por ejemplo, la pestaña Inicio de Sesión de Docker demuestra cómo se puede utilizar el token con la CLI de Docker.
