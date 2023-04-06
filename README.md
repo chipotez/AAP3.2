@@ -125,3 +125,62 @@ SKU:                 SER0496
 Contract:            16686769
 Pool ID:             2c94a0538636e30001863bc3c1663c04
 Provides Management: No</pre>
+
+Note
+Do not use MCT4022 as a pool_id for your subscription because it can cause Ansible Automation Platform subscription attachment to fail.
+
+Example
+
+An example output of the subsciption-manager list command. Obtain the pool_id as seen in the Pool ID: section:
+
+<pre>Subscription Name: Red Hat Ansible Automation, Premium (5000 Managed Nodes)
+  Provides: Red Hat Ansible Engine
+  Red Hat Ansible Automation Platform
+  SKU: MCT3695
+  Contract: ````
+  Pool ID: &lt;pool_id&gt;
+  Provides Management: No
+  Available: 4999
+  Suggested: 1</pre>
+  
+  Attach the subscription:
+<pre>[root@app ~]# subscription-manager attach --pool=2c94a0538636e30001863bc3c1663c04
+Successfully attached a subscription for: Red Hat Ansible Automation Platform, Self-Support (100 Managed Nodes, NFR, Partner Only)
+</pre>
+
+You have now attached your Red Hat Ansible Automation Platform subscriptions to all nodes.
+
+Verification
+
+Verify the subscription was successfully attached:
+
+<pre>[root@app ~]# subscription-manager list --consumed
++-------------------------------------------+
+   Consumed Subscriptions
++-------------------------------------------+
+Subscription Name:   Red Hat Ansible Automation Platform, Self-Support (100 Managed Nodes, NFR, Partner Only)
+Provides:            Red Hat Ansible Automation Platform
+                     JBoss Enterprise Application Platform
+                     Red Hat Single Sign-On
+SKU:                 SER0496
+Contract:            16686769
+Account:             6696234
+Serial:              8212813249902247294
+Pool ID:             2c94a0538636e30001863bc3c1663c04
+Provides Management: No
+Active:              True
+Quantity Used:       1
+Service Type:        L1-L3
+Roles:               
+Service Level:       Self-Support
+Usage:               
+Add-ons:             
+Status Details:      Subscription is current
+Subscription Type:   Standard
+Starts:              02/09/2023
+Ends:                02/09/2024
+Entitlement Type:    Physical
+</pre>
+
+
+
